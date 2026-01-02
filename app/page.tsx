@@ -1,14 +1,25 @@
+import dynamic from 'next/dynamic';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import AboutArovis from '@/components/AboutArovis';
+import FeatureSections from '@/components/FeatureSections';
+import WhyChoose from '@/components/WhyChoose';
+import Footer from '@/components/Footer';
+
+const Contact = dynamic(() => import('@/components/Contact'), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
-    <div
-      style={{
-        maxWidth: 1280,
-        margin: '0 auto',
-        padding: '2rem',
-        textAlign: 'center',
-      }}
-    >
-      Start prompting.
-    </div>
+    <main className="min-h-screen bg-white">
+      <Header />
+      <Hero />
+      <AboutArovis />
+      <FeatureSections />
+      <WhyChoose />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
