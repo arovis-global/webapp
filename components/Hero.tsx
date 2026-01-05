@@ -145,17 +145,18 @@ export default function Hero() {
           <p className="text-center text-sm text-gray-500 mb-8 uppercase tracking-wider">
             Trusted by Industry Leaders
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-40">
-            {['Company A', 'Company B', 'Company C', 'Company D', 'Company E'].map(
-              (company, index) => (
-                <div
-                  key={index}
-                  className="text-2xl font-bold text-gray-400"
-                >
-                  {company}
-                </div>
-              )
-            )}
+          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
+            {[
+              'Acme Inc',
+              'Tech Innovations',
+              'Growth Labs',
+              'Data Solutions',
+              'Smart Analytics',
+            ].map((company, index) => (
+              <div key={index} className="text-lg font-semibold text-gray-500">
+                {company}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

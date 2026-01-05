@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Zap } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -15,11 +15,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-blue-600 p-2 rounded-lg">
-              <Zap className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-gray-900">Arovis</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo_arovis_png.png"
+              alt="Arovis"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
