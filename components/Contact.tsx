@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { supabase } from '@/lib/supabase';
+import { createSupabaseClient } from '@/lib/supabase';
 import { toast } from 'sonner';
 
 export default function Contact() {
@@ -33,6 +33,7 @@ export default function Contact() {
     setLoading(true);
 
     try {
+      const supabase = createSupabaseClient();
       const { error } = await supabase
         .from('contact_submissions')
         .insert([formData]);
