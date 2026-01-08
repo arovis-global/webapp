@@ -11,13 +11,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="mb-4">
+            <div className="mb-4 bg-white p-3 rounded-lg inline-block">
               <Image
                 src="/logo_arovis_png.png"
                 alt="Arovis"
                 width={140}
                 height={50}
-                className="h-12 w-auto"
+                className="h-12 w-auto brightness-110"
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">

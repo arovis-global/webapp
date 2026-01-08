@@ -1,14 +1,21 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Sparkles, DollarSign, Target, Zap, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+
+const featureImages = [
+  '/chatgpt_image_jan_8,_2026,_10_14_06_pm.png',
+  '/chatgpt_image_jan_8,_2026,_10_10_04_pm.png',
+  '/chatgpt_image_jan_9,_2026,_12_58_48_am.png',
+  '/chatgpt_image_jan_9,_2026,_12_54_36_am.png',
+];
 
 const features = [
   {
     badge: 'Deep Analytics',
-    icon: Sparkles,
     title: 'Supercharge Your Success with AI',
     description:
       'Harness the power of artificial intelligence to transform your business operations and accelerate growth.',
@@ -22,7 +29,6 @@ const features = [
   },
   {
     badge: 'Revenue Growth',
-    icon: DollarSign,
     title: 'Boost Your Earnings',
     description:
       'Unlock new revenue streams and maximize profitability with data-driven strategies that deliver results.',
@@ -36,7 +42,6 @@ const features = [
   },
   {
     badge: 'Actionable Intelligence',
-    icon: Target,
     title: 'Insights You Can Actually Use',
     description:
       'Move beyond vanity metrics with actionable insights that drive real business decisions and outcomes.',
@@ -50,7 +55,6 @@ const features = [
   },
   {
     badge: 'Smart Automation',
-    icon: Zap,
     title: 'Campaign Intelligence That Actually Works',
     description:
       'Deploy intelligent campaigns that learn, adapt, and optimize themselves for maximum performance.',
@@ -66,7 +70,7 @@ const features = [
 
 export default function FeatureSections() {
   return (
-    <section id="services" className="py-20 sm:py-32 bg-gray-50">
+    <section id="services" className="py-16 sm:py-24 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
         {features.map((feature, index) => (
           <motion.div
@@ -75,14 +79,12 @@ export default function FeatureSections() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`grid lg:grid-cols-2 gap-12 items-center ${
-              feature.reverse ? 'lg:grid-flow-dense' : ''
-            }`}
+            className={'grid lg:grid-cols-2 gap-12 items-center ' + (feature.reverse ? 'lg:grid-flow-dense' : '')}
           >
             <div className={feature.reverse ? 'lg:col-start-2' : ''}>
               <Badge
                 variant="outline"
-                className="mb-4 text-blue-600 border-blue-600"
+                className="mb-4 text-blue-600 border-blue-600 bg-blue-50"
               >
                 {feature.badge}
               </Badge>
@@ -95,86 +97,25 @@ export default function FeatureSections() {
               <ul className="space-y-4 mb-8">
                 {feature.points.map((point, idx) => (
                   <li key={idx} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-6 w-6 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{point}</span>
                   </li>
                 ))}
               </ul>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-shadow">
                 Learn More
               </Button>
             </div>
 
             <div className={feature.reverse ? 'lg:col-start-1 lg:row-start-1' : ''}>
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl p-12 flex items-center justify-center">
-                  <svg
-                    viewBox="0 0 400 400"
-                    className="w-full h-full"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient
-                        id={`grad-${index}`}
-                        x1="0%"
-                        y1="0%"
-                        x2="100%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          style={{ stopColor: '#3B82F6', stopOpacity: 0.8 }}
-                        />
-                        <stop
-                          offset="100%"
-                          style={{ stopColor: '#1D4ED8', stopOpacity: 0.8 }}
-                        />
-                      </linearGradient>
-                    </defs>
-
-                    <circle
-                      cx="200"
-                      cy="200"
-                      r="150"
-                      fill={`url(#grad-${index})`}
-                      opacity="0.2"
-                    />
-                    <circle
-                      cx="200"
-                      cy="200"
-                      r="100"
-                      fill={`url(#grad-${index})`}
-                      opacity="0.3"
-                    />
-                    <circle
-                      cx="200"
-                      cy="200"
-                      r="60"
-                      fill={`url(#grad-${index})`}
-                    />
-
-                    <foreignObject x="150" y="150" width="100" height="100">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <feature.icon className="h-12 w-12 text-white" />
-                      </div>
-                    </foreignObject>
-
-                    {[0, 1, 2, 3, 4, 5].map((i) => {
-                      const angle = (i * 60 * Math.PI) / 180;
-                      const x = 200 + 130 * Math.cos(angle);
-                      const y = 200 + 130 * Math.sin(angle);
-                      return (
-                        <circle
-                          key={i}
-                          cx={x}
-                          cy={y}
-                          r="15"
-                          fill="#3B82F6"
-                          opacity="0.6"
-                        />
-                      );
-                    })}
-                  </svg>
+                <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl bg-white">
+                  <Image
+                    src={featureImages[index]}
+                    alt={feature.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>

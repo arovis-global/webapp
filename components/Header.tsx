@@ -28,31 +28,31 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="#home"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-600 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 hover:bg-clip-text hover:text-transparent transition-all font-medium"
             >
               Home
             </Link>
             <Link
               href="#about"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-600 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 hover:bg-clip-text hover:text-transparent transition-all font-medium"
             >
               About Us
             </Link>
             <Link
               href="#services"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-600 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 hover:bg-clip-text hover:text-transparent transition-all font-medium"
             >
               Services
             </Link>
             <Link
               href="#contact"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-600 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 hover:bg-clip-text hover:text-transparent transition-all font-medium"
             >
               Contact Us
             </Link>
           </nav>
 
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+          <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl transition-shadow">
             We're Hiring
           </Button>
         </div>

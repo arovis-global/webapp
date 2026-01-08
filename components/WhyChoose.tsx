@@ -29,7 +29,7 @@ const metrics = [
 
 export default function WhyChoose() {
   return (
-    <section className="py-20 sm:py-32 bg-white">
+    <section className="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,7 @@ export default function WhyChoose() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Why Choose Arovis
+            Why Choose <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Arovis</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Join hundreds of companies that trust Arovis to power their growth
@@ -58,9 +58,9 @@ export default function WhyChoose() {
               whileHover={{ scale: 1.05 }}
               className="h-full"
             >
-              <Card className="h-full border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+              <Card className="h-full border-gray-200 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-200/50 transition-all duration-300 bg-white">
                 <CardContent className="p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-600 rounded-xl mb-4">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl mb-4 shadow-lg">
                     <metric.icon className="h-7 w-7 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">

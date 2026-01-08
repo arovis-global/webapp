@@ -30,7 +30,7 @@ const features = [
 
 export default function AboutArovis() {
   return (
-    <section id="about" className="py-20 sm:py-32 bg-white">
+    <section id="about" className="py-16 sm:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,7 @@ export default function AboutArovis() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            About Arovis
+            About <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Arovis</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted partner in building intelligent growth systems. We
@@ -58,12 +58,12 @@ export default function AboutArovis() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card className="h-full border-gray-200 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-200/50 transition-all duration-300 hover:-translate-y-1 bg-white">
                 <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-6">
-                    <feature.icon className="h-8 w-8 text-blue-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl mb-6 shadow-md">
+                    <feature.icon className="h-8 w-8 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" />
                   </div>
-                  <div className="text-4xl font-bold text-blue-600 mb-3">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-3">
                     {feature.stat}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">

@@ -63,7 +63,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-gray-50">
+    <section id="contact" className="py-16 sm:py-24 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <motion.div
@@ -96,15 +96,15 @@ export default function Contact() {
                 </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mr-2">•</span>
                     Personalized consultation
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mr-2">•</span>
                     Custom growth strategy
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mr-2">•</span>
                     No-obligation proposal
                   </li>
                 </ul>
@@ -246,7 +246,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 text-lg"
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white py-6 text-lg shadow-lg hover:shadow-xl transition-shadow disabled:opacity-50"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </Button>
